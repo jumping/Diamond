@@ -54,4 +54,7 @@ chmod +x /usr/bin/diamond
 # Log / Run directory permissions
 chown -R diamond:diamond /var/log/diamond
 
+#config
+[ -f /etc/diamond/diamond.conf.example ] && cp /etc/diamond/diamond.conf.example /etc/diamond/diamond.conf && sed -i '57s/127.0.0.1/graphite01.tfxiq.com/' /etc/diamond/diamond.conf
+
 exit 0
